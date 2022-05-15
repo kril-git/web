@@ -5,3 +5,6 @@
 Создание и настройка ssh ключей <https://gist.github.com/sabonim/279498#file-ssh-txt>  
 Регулярные выражения <https://habr.com/ru/post/545150/>  
 
+***
+
+
