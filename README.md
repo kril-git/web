@@ -7,7 +7,7 @@
 Уроки про GIT <https://webdevkin.ru/courses/git/clone-init>  <https://proselyte.net/tutorials/git/branch_management/>
 ***
 Проверка регулярных выражений <https://regex101.com>
-
+Bash скрипты <https://habr.com/ru/company/ruvds/blog/325522/>
 ***
 ***
 
