@@ -21,11 +21,11 @@ case "$1" in
 			;;
 			*)
 				sudo ln -sf $PROJECT_DIR_STEPIK/etc/nginx.conf /etc/nginx/sites-enabled/nginx.conf
-				sudo ln -s /home/box/web/etc/hello.py /etc/gunicorn.d/test
+				sudo ln -sf /home/box/web/etc/hello.py /etc/gunicorn.d/test
 				sudo rm -rf /etc/nginx/sites-enabled/default
 				sudo /etc/init.d/nginx stop
 				sudo /etc/init.d/nginx start
-				gunicorn -c /home/box/web/etc/hello.py hello:app
+				gunicorn -c /home/box/web/etc/hello.py hello:app &
 			;;
 		esac
 	;;
