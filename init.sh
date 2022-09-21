@@ -13,6 +13,7 @@ case "$1" in
 				echo
 				sudo ls $PROJECT_DIR_HOME/etc/nginx.conf
 				sudo ln -sf $PROJECT_DIR_HOME/etc/nginx.conf /etc/nginx/sites-enabled/nginx.conf
+
 				sudo rm -rf /etc/nginx/sites-enabled/default
 				sudo /etc/init.d/nginx stop
 				sudo /etc/init.d/nginx start
@@ -20,6 +21,7 @@ case "$1" in
 			;;
 			*)
 				sudo ln -sf $PROJECT_DIR_STEPIK/etc/nginx.conf /etc/nginx/sites-enabled/nginx.conf
+				sudo ln -s /home/box/web/etc/hello.py /etc/gunicorn.d/test
 				sudo rm -rf /etc/nginx/sites-enabled/default
 				sudo /etc/init.d/nginx stop
 				sudo /etc/init.d/nginx start
