@@ -9,7 +9,8 @@ PROJECT_DIR_HOME="$HOME/web"
 case "$1" in 
 	init) 
 		case "$2" in
-			home)	echo $1 $2 $PROJECT_DIR_HOME $PROJECT_DIR_HOME/etc/nginx.conf
+			home)	
+				echo $1 $2 $PROJECT_DIR_HOME $PROJECT_DIR_HOME/etc/nginx.conf
 				echo
 				sudo ls $PROJECT_DIR_HOME/etc/nginx.conf
 				sudo ln -sf $PROJECT_DIR_HOME/etc/nginx.conf /etc/nginx/sites-enabled/nginx.conf
@@ -17,7 +18,7 @@ case "$1" in
 				sudo rm -rf /etc/nginx/sites-enabled/default
 				sudo /etc/init.d/nginx stop
 				sudo /etc/init.d/nginx start
-				gunicorn -c /home/kril/web/etc/hello.py hello:app
+				gunicorn -c /home/kril/web/etc/hello.py hello:app &
 			;;
 			*)
 				sudo ln -sf $PROJECT_DIR_STEPIK/etc/nginx.conf /etc/nginx/sites-enabled/nginx.conf
