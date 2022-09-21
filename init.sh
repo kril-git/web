@@ -16,7 +16,7 @@ case "$1" in
 				sudo rm -rf /etc/nginx/sites-enabled/default
 				sudo /etc/init.d/nginx stop
 				sudo /etc/init.d/nginx start
-				gunicorn -c /home/box/web/etc/hello.py hello:app
+				gunicorn -c /home/kril/web/etc/hello.py hello:app
 			;;
 			*)
 				sudo ln -sf $PROJECT_DIR_STEPIK/etc/nginx.conf /etc/nginx/sites-enabled/nginx.conf
